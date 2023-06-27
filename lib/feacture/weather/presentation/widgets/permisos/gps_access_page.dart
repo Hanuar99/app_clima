@@ -11,14 +11,21 @@ class GpsAccessPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
-      body: Center(
-        child: BlocBuilder<ClimaBloc, ClimaState>(
-          builder: (context, state) {
-            return state.isServiceGpsEnabled
-                ? const _AccessButon()
-                : const _EnableGpsMessage();
-          },
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                tileMode: TileMode.clamp,
+                begin: Alignment.topRight,
+                end: Alignment.bottomRight,
+                colors: [AppColors.background, AppColors.background2])),
+        child: Center(
+          child: BlocBuilder<ClimaBloc, ClimaState>(
+            builder: (context, state) {
+              return state.isServiceGpsEnabled
+                  ? const _AccessButon()
+                  : const _EnableGpsMessage();
+            },
+          ),
         ),
       ),
     );
@@ -37,9 +44,7 @@ class _AccessButon extends StatelessWidget {
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(30)),
         boxShadow: [
-          BoxShadow(
-            color: Colors.white,
-          ),
+          BoxShadow(color: AppColors.colorContainer),
         ],
       ),
       width: ScreenUtil().screenWidth,
@@ -94,9 +99,11 @@ class _EnableGpsMessage extends StatelessWidget {
     return Center(
       child: Container(
         width: 301.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20.r),
-          color: Colors.white,
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+          boxShadow: [
+            BoxShadow(color: AppColors.colorContainer),
+          ],
         ),
         padding: EdgeInsets.symmetric(horizontal: 30.w),
         child: Padding(
