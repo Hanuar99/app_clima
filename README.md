@@ -2,7 +2,7 @@
 Esta aplicación sigue la arquitectura limpia propuesta por el tío Bob 
 Utilicé BloC como administración de estado para mejorar el rendimiento de reconstrucción de widgets. 
 ## Descargar App
-<a href="https://drive.google.com/file/d/1QNKDNA38WquAdk6m-wUA6IsPZ4kyGdin/view?usp=sharing"><img src="https://playerzon.com/asset/download.png" width="200"></img></a >
+<a href="https://github.com/Hanuar99/app_clima/releases/download/apk/app-release.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a >
 
 ## Capturas de pantalla
 
@@ -12,7 +12,7 @@ Utilicé BloC como administración de estado para mejorar el rendimiento de reco
   <img src="Capturas/00.jpg" width="300" hight=500  title="0-Home">
 </p>
 
-##Paquetes comunes
+## Paquetes comunes
 - Equatables para la igualdad de objetos
 - get_it para la inyección de dependencias
 - Bloc para la gestión del Estado
